@@ -3,7 +3,7 @@ NACE_Sector                   <- function(x){
   x[, "NACE"] <- gsub("\\s+","",x[, "NACE"])
   x[, "NACE"] <- tolower(x[, "NACE"])
   x[, "NACE"] <- gsub(",","",x[, "NACE"])
-  x[, "NACE"] <- gsub("[^[:alnum:] ]","",x[, "NACE"])
+  x[, "NACE"] <- gsub("[^[:alpha:] ]","",x[, "NACE"])
   x[, "NACE"] <- gsub("u0096","",x[, "NACE"])
   x[, "NACE"][which(x[, "NACE"] =="accommodation")] <- "I"
   x[, "NACE"][which(x[, "NACE"] =="activitiesauxiliarytofinancialservicesandinsuranceactivities")] <- "K"
