@@ -1,10 +1,10 @@
 NACE_Sector                   <- function(x){
   x[, "NACE"] <- x[, "NACEBEL_SUBSECTOR_OMS"]
   x[, "NACE"] <- gsub("\\s+","",x[, "NACE"])
+  x[, "NACE"] <- str_remove(x[, "NACE"], "<U+0096>")
   x[, "NACE"] <- tolower(x[, "NACE"])
   x[, "NACE"] <- gsub(",","",x[, "NACE"])
   x[, "NACE"] <- gsub("[^[:alpha:] ]","",x[, "NACE"])
-  x[, "NACE"] <- str_remove(x[, "NACE"], "u0096")
   x[, "NACE"][which(x[, "NACE"] =="accommodation")] <- "I"
   x[, "NACE"][which(x[, "NACE"] =="activitiesauxiliarytofinancialservicesandinsuranceactivities")] <- "K"
   x[, "NACE"][which(x[, "NACE"] =="activitiesofextraterritorialorganisationsandbodies")] <- "U"
