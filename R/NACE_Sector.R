@@ -84,6 +84,8 @@ NACE_Sector                   <- function(x){
   x[, "NACE"][which(x[, "NACE"] =="telecommunications")] <- "J"
   x[, "NACE"][which(x[, "NACE"] =="travelagencytouroperatorreservationserviceandrelatedactivities")] <- "N"
   x[, "NACE"][which(x[, "NACE"] =="undifferentiatedgoodsu0096andservicesproducingactivitiesofprivatehouseholdsforownuse")] <- "T"
+  x[, "NACE"][which(x[, "NACE"] =="undifferentiatedgoodsuandservicesproducingactivitiesofprivatehouseholdsforownuse")] <- "T"
+  x[, "NACE"][which(x[, "NACE"] =="undifferentiatedgoodsandservicesproducingactivitiesofprivatehouseholdsforownuse")] <- "T"
   x[, "NACE"][which(x[, "NACE"] =="veterinaryactivities")] <- "M"
   x[, "NACE"][which(x[, "NACE"] =="warehousingandsupportactivitiestotransportation")] <- "H"
   x[, "NACE"][which(x[, "NACE"] =="wastecollectiontreatmentanddisposalactivitiesmaterialrecovery")] <- "E"
