@@ -1,4 +1,5 @@
 NACE_Sector                   <- function(x){
+require(stringr)
   x[, "NACE"] <- x[, "NACEBEL_SUBSECTOR_OMS"]
   x[, "NACE"] <- gsub("\\s+","",x[, "NACE"])
   x[, "NACE"] <- str_remove(x[, "NACE"], "<U+0096>")
